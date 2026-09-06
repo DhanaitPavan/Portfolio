@@ -23,12 +23,12 @@ GITHUB = "https://github.com/DhanaitPavan"
 LINKEDIN = "https://www.linkedin.com/in/pavan-dhanait?utm_source=share_via&utm_content=profile&utm_medium=member_android"
 CERT_URL = "https://www.coursera.org/account/accomplishments/professional-cert/3KCGSW0P3D7D"
 
-ACCENT = "#fbbf24"      # amber
-ACCENT2 = "#22d3ee"     # cyan
+ACCENT = "#d97706"      # deeper amber for light backgrounds
+ACCENT2 = "#0891b2"     # deeper cyan for light backgrounds
 INK = "#0b1220"
 
 # ---------------------------------------------------------------------------
-# Styling
+# Styling (Light Theme Adapted)
 # ---------------------------------------------------------------------------
 st.markdown(
     f"""
@@ -43,70 +43,66 @@ st.markdown(
       /* Hero */
       .hero {{
           background:
-            radial-gradient(900px 420px at 85% -10%, rgba(251,191,36,0.22), transparent 60%),
-            radial-gradient(700px 380px at 5% 110%, rgba(34,211,238,0.14), transparent 60%),
-            linear-gradient(135deg, #0b1220 0%, #111a2e 60%, #0b1220 100%);
-          border: 1px solid rgba(251,191,36,0.18);
+            radial-gradient(900px 420px at 85% -10%, rgba(251,191,36,0.18), transparent 60%),
+            radial-gradient(700px 380px at 5% 110%, rgba(34,211,238,0.12), transparent 60%),
+            linear-gradient(135deg, #fffbeb 0%, #ffffff 60%, #fef3c7 100%);
+          border: 1px solid rgba(251,191,36,0.3);
           border-radius: 20px;
           padding: 3.2rem 3rem 2.6rem;
-          color: #e5e7eb;
+          color: #1f2937;
           margin-bottom: 2.2rem;
+          box-shadow: 0 4px 20px -4px rgba(0,0,0,0.05);
       }}
       .hero h1 {{
           font-size: 3.2rem; line-height: 1.05; margin: 0.4rem 0 1rem;
-          color: #f8fafc;
+          color: #111827;
       }}
       .hero h1 span {{ color: {ACCENT}; }}
-      .hero p {{ color: #aeb6c6; font-size: 1.08rem; max-width: 640px; }}
+      .hero p {{ color: #4b5563; font-size: 1.08rem; max-width: 640px; }}
 
       .eyebrow {{
           font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em;
           text-transform: uppercase; color: {ACCENT}; margin-bottom: 0.3rem;
       }}
       .eyebrow-dark {{ color: #b45309; }}
-      .muted {{ color: #6b7280; }}
+      .muted {{ color: #4b5563; }}
 
       /* Chips */
       .chip {{
           display: inline-block; border: 1px solid #d1d5db; border-radius: 999px;
           padding: 3px 14px; margin: 3px 5px 3px 0; font-size: 0.8rem;
-          background: #ffffff; transition: all .18s ease;
+          background: #ffffff; color: #374151; transition: all .18s ease;
       }}
       .chip:hover {{ border-color: {ACCENT}; background: #fffbeb; transform: translateY(-1px); }}
-      .chip-dark {{
-          display: inline-block; border: 1px solid rgba(251,191,36,0.35); border-radius: 999px;
-          padding: 3px 14px; margin: 3px 5px 3px 0; font-size: 0.8rem;
-          color: #fde68a; background: rgba(251,191,36,0.06);
-      }}
 
       /* Stat cards */
       .stat-card {{
           border: 1px solid #e5e7eb; border-radius: 16px; padding: 1.3rem 1.4rem;
           background: linear-gradient(180deg, #ffffff, #fafaf7);
-          box-shadow: 0 1px 2px rgba(16,24,40,0.05);
+          box-shadow: 0 1px 3px rgba(16,24,40,0.08);
           transition: all .2s ease;
       }}
-      .stat-card:hover {{ transform: translateY(-4px); box-shadow: 0 12px 28px -12px rgba(180,83,9,0.35); border-color: {ACCENT}; }}
+      .stat-card:hover {{ transform: translateY(-4px); box-shadow: 0 12px 28px -12px rgba(180,83,9,0.25); border-color: {ACCENT}; }}
       .stat-num {{
           font-family: 'Space Grotesk', sans-serif; font-size: 2.4rem;
           font-weight: 700; color: {INK}; line-height: 1;
       }}
       .stat-num em {{ color: #b45309; font-style: normal; }}
-      .stat-label {{ color: #6b7280; font-size: 0.85rem; margin-top: 0.35rem; }}
+      .stat-label {{ color: #4b5563; font-size: 0.85rem; margin-top: 0.35rem; }}
 
       /* Project cards */
       .proj {{
           border: 1px solid #e5e7eb; border-radius: 18px; overflow: hidden;
-          background: #ffffff; height: 100%;
+          background: #ffffff; height: 100%; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
           transition: all .22s ease;
       }}
-      .proj:hover {{ transform: translateY(-5px); box-shadow: 0 18px 40px -18px rgba(16,24,40,0.35); }}
+      .proj:hover {{ transform: translateY(-5px); box-shadow: 0 18px 40px -18px rgba(16,24,40,0.15); }}
       .proj-band {{
           height: 10px;
           background: linear-gradient(90deg, {ACCENT}, #f59e0b, {ACCENT2});
       }}
       .proj-body {{ padding: 1.5rem 1.7rem 1.7rem; }}
-      .proj-body h3 {{ margin: 0 0 0.2rem; font-size: 1.35rem; }}
+      .proj-body h3 {{ margin: 0 0 0.2rem; font-size: 1.35rem; color: #111827; }}
       .proj-sub {{ color: #b45309; font-weight: 600; margin-bottom: 0.7rem; }}
 
       /* Timeline */
@@ -124,12 +120,13 @@ st.markdown(
       /* Contact banner */
       .contact-banner {{
           background:
-            radial-gradient(600px 300px at 90% 0%, rgba(34,211,238,0.18), transparent 60%),
-            linear-gradient(135deg, #0b1220, #17223a);
-          border: 1px solid rgba(251,191,36,0.25);
-          color: #e5e7eb; border-radius: 20px; padding: 2.6rem 2.8rem;
+            radial-gradient(600px 300px at 90% 0%, rgba(8,145,178,0.1), transparent 60%),
+            linear-gradient(135deg, #fffbeb, #fef3c7);
+          border: 1px solid rgba(251,191,36,0.35);
+          color: #1f2937; border-radius: 20px; padding: 2.6rem 2.8rem;
+          box-shadow: 0 4px 20px -4px rgba(0,0,0,0.04);
       }}
-      .contact-banner h2 {{ color: #f8fafc; margin-top: 0.2rem; }}
+      .contact-banner h2 {{ color: #111827; margin-top: 0.2rem; }}
       .contact-banner a {{ color: {ACCENT}; }}
       .contact-line {{ font-size: 1.05rem; margin: 0.35rem 0; }}
 
@@ -152,7 +149,7 @@ st.markdown(
     <div class="hero">
       <p class="eyebrow">Entry-level Data & AI Professional</p>
       <h1>Turning raw data<br/>into <span>clear decisions.</span></h1>
-      <p>I'm <strong style="color:#f8fafc;">Pavan Dhanait</strong> — a Data Scientist,
+      <p>I'm <strong style="color:#111827;">Pavan Dhanait</strong> — a Data Scientist,
       Data Analyst, ML Engineer, and aspiring GenAI Engineer building practical
       systems that connect analysis with action.</p>
       <p style="font-size:0.92rem; margin-top:1.4rem;">
@@ -222,8 +219,8 @@ with radar_col:
             r=values + [values[0]],
             theta=categories + [categories[0]],
             fill="toself",
-            fillcolor="rgba(251,191,36,0.18)",
-            line=dict(color="#f59e0b", width=3),
+            fillcolor="rgba(217,119,6,0.12)",
+            line=dict(color="#d97706", width=3),
             marker=dict(size=7, color="#b45309"),
             hovertemplate="%{theta}<extra></extra>",
         )
@@ -231,7 +228,7 @@ with radar_col:
     fig.update_layout(
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 5], showticklabels=False, gridcolor="#e5e7eb"),
-            angularaxis=dict(gridcolor="#e5e7eb", tickfont=dict(size=12, family="Space Grotesk")),
+            angularaxis=dict(gridcolor="#e5e7eb", tickfont=dict(size=12, family="Space Grotesk", color="#374151")),
             bgcolor="rgba(0,0,0,0)",
         ),
         paper_bgcolor="rgba(0,0,0,0)",
@@ -349,15 +346,15 @@ with chart_col:
             mode="lines+markers+text",
             text=["Sumago<br>AI/ML Intern", "", "Amdox<br>Data Science Intern", ""],
             textposition="top center",
-            line=dict(color="#f59e0b", width=4, shape="spline", smoothing=1.2),
-            marker=dict(size=13, color="#0b1220", line=dict(color="#f59e0b", width=3)),
+            line=dict(color="#d97706", width=4, shape="spline", smoothing=1.2),
+            marker=dict(size=13, color="#ffffff", line=dict(color="#d97706", width=3)),
             hovertemplate="%{x}<extra></extra>",
         )
     )
     fig2.update_layout(
-        title=dict(text="My journey so far", font=dict(family="Space Grotesk", size=18)),
+        title=dict(text="My journey so far", font=dict(family="Space Grotesk", size=18, color="#111827")),
         showlegend=False,
-        xaxis=dict(showgrid=False, tickfont=dict(size=11)),
+        xaxis=dict(showgrid=False, tickfont=dict(size=11, color="#4b5563")),
         yaxis=dict(visible=False, range=[0.6, 2.9]),
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
